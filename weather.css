@@ -1,8 +1,16 @@
+/*body {
+    background: url('./Assets/weather.jpg') no-repeat bottom center fixed;
+    background-size: cover;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: aliceblue;
+    margin: 0;
+    min-height: 100vh;
+}*/
 body{
-    background: url('./912364.jpg');
+    background: url('./images/912364.jpg');
     background-position: bottom;
     background-attachment: fixed;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif sans-serif;
     color: white
 }
 .searchBar{
@@ -11,6 +19,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.inputfield{
+    outline: none;
 }
 .searchBarparentDiv{
     width: 50%;
@@ -32,6 +43,7 @@ body{
 }
 .mainContentparentDiv{
     height: 90vh;
+    flex-direction: row;
 }
 .leftDiv{
     width: 30%;
@@ -72,7 +84,7 @@ body{
 .rightRow{
     height:27vh;
     width: 100%;
-    border:2px white solid;
+    padding-right: 3px;
 }
 .extraMetric{
     background: rgba(212, 212, 212, 0.4);
@@ -87,4 +99,77 @@ body{
     width: 45%;
     height: 85%;
     border-radius: 15px;
+}
+.todayTemp{
+    background: rgba(212, 212, 212, 0.4);
+    width: fit-content;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+@media only screen and (max-width:767px) {
+    .leftDiv{
+    width: 100%;
+    height :100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+    .rightDiv
+    {
+        margin-top: 15px;
+        gap: 15px;
+        width:100%;
+    }
+    .mainContentparentDiv{
+    height:90vh;
+    flex-direction: column;
+}
+
+    .searchBar{
+    width:100%;
+    }
+    
+    .searchBarparentDiv{
+    width:85%;
+    }
+    .rowOne{
+        /* flex-direction: column; */
+        
+        flex-wrap: wrap ;
+        width:85%;
+        margin:auto;
+    }
+    .rowTwo{
+        flex-direction: column;
+        gap: 10px;
+        height: 30vh;
+    }
+    .rowTwoDiv{
+    background: rgba(212, 212, 212, 0.4);
+    backdrop-filter: blur(15px);
+    width: 85%;
+    height: 85%;
+    border-radius: 15px;
+    }
+    .rowThree{
+        width: 85%;
+        margin: auto;
+    }
+    .todayTempParentDiv{
+        width: 100%;
+        flex-wrap: wrap;
+        margin:auto;
+        gap:15px;
+    }
 }
